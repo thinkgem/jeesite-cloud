@@ -1,0 +1,4 @@
+[submodule "jeesite"]
+	path = jeesite
+	url = https://gitee.com/thinkgem/jeesite4.git
+	branch = master
