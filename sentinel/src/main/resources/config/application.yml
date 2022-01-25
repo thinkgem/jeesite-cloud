@@ -3,7 +3,7 @@
 server.port: 9311
 csp.sentinel.dashboard.server: localhost:9311
 project.name: sentinel-dashboard
-project.version: 1.7.2
+project.version: 1.8.1
 
 #spring settings
 spring.http.encoding.force: true
