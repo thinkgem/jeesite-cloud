@@ -106,3 +106,5 @@ spring:
 #======================================#
 #========== Project settings ==========#
 #======================================#
+
+management.endpoint.gateway.enabled: false
