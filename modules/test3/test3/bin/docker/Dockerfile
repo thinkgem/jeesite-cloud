@@ -21,4 +21,4 @@ ENTRYPOINT java -cp /app $JAVA_OPTS org.springframework.boot.loader.WarLauncher
 
 EXPOSE 8983
 
-#docker run -p 8983:8983 thinkgem/jeesite-cloud-module-test2:4.4
+#docker run -p 8983:8983 thinkgem/jeesite-cloud-module-test3:4.4
