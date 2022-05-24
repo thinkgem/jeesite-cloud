@@ -8,7 +8,7 @@ productName: JeeSite Cloud
 companyName: ThinkGem
 
 # 产品版本、版权年份
-productVersion: V4.4
+productVersion: V4.5
 copyrightYear: 2022
 
 #是否演示模式
@@ -22,6 +22,8 @@ server:
 
   servlet:
     context-path: /js
+    register-default-servlet: false
+    encoding.enabled: true
   tomcat:
     uri-encoding: UTF-8
     
@@ -216,19 +218,22 @@ jdbc:
 seata:
   enabled: false
   application-id: ${spring.application.name}
-  tx-service-group: jeesite_tx_group
+  tx-service-group: default_tx_group
   service:
     vgroup-mapping:
-      jeesite_tx_group: default
+      default_tx_group: default
+  client:
+    undo:
+      log-serialization: kryo
   registry:
     type: nacos
     nacos:
       application: seata-server
       server-addr: 127.0.0.1:8848
-      group : "SEATA_GROUP"
-      namespace: ""
-      username: "nacos"
-      password: "nacos"
+      group : SEATA_GROUP
+      namespace: ~
+      username: nacos
+      password: nacos
       
 #======================================#
 #========== Spring settings ===========#
@@ -240,6 +245,11 @@ spring:
   profiles:
     active: default
     
+  # MVC 映射匹配策略
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+      
   # Consul 服务发现
   cloud:
     consul:
@@ -261,7 +271,7 @@ spring:
         ds2.nacos:
           server-addr: 127.0.0.1:8848
           data-id: ${spring.application.name}-sentinel
-          group-id: jeesite-cloud-43
+          group-id: jeesite-cloud-yml
           rule-type: flow
   
   # Spring Boot Admin 服务监控中心：https://codecentric.github.io/spring-boot-admin/2.0.6
