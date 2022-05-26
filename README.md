@@ -60,9 +60,6 @@ JeeSite Cloud 并没有重复制造轮子，它只是将目前比较成熟的、
 * 分布式事务 Seata 服务（推荐，1.5之后新增监控界面，端口7091）：
     - 服务主项目：jeesite-cloud-module-seata ： <http://127.0.0.1:7091>
     - 客户端项目（提供其它模块调用）：jeesite-cloud-module-seata-client
-* 分布式事务 LCN 服务（4.3之前版本）：
-    - 服务主项目：jeesite-cloud-module-txlcn ： <http://127.0.0.1:7970>
-    - 客户端项目（提供其它模块调用）：jeesite-cloud-module-txlcn-client
 * 熔断限流：jeesite-cloud-sentinel ： <http://127.0.0.1:9311>
 * 链路追踪：jeesite-cloud-zipkin ： <http://127.0.0.1:9411>
 * 解释：主项目为服务提供者、客户端项目为服务消费者
@@ -83,7 +80,7 @@ Redis 是一个缓存数据库，主要用来集中式管理共享会话和系�
 下载地址：<https://gitee.com/thinkgem/jeesite4-cloud/attach_files> 找到 `Redis-x64-4.0.2.2.zip` 下载文件。
 
 解压  `Redis-x64-4.0.2.2.zip` 压缩包，运行 `service-install.bat` 安装 Windows 系统服务。
-
+d
 默认地址：127.0.0.1；默认端口：6379；默认密码：1234，可根据自己需要修改 conf 文件。
 
 ### 启动 Nacos 服务

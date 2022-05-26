@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>com.alibaba.nacos</groupId>
 			<artifactId>nacos-config</artifactId>
-			<version>${nacos.version}</version><!--$NO-MVN-MAN-VER$-->
+			<version>${nacos.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
