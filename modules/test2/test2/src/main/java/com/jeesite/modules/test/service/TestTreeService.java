@@ -4,19 +4,17 @@
  */
 package com.jeesite.modules.test.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.jeesite.common.service.TreeService;
 import com.jeesite.modules.file.utils.FileUploadUtils;
 import com.jeesite.modules.test.api.TestTreeServiceApi;
 import com.jeesite.modules.test.dao.TestTreeDao;
 import com.jeesite.modules.test.entity.TestTree;
-
 import io.seata.spring.annotation.GlobalTransactional;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * 测试树表Service
@@ -25,7 +23,6 @@ import io.seata.spring.annotation.GlobalTransactional;
  */
 @Service
 @RestController
-@Transactional(readOnly=true)
 public class TestTreeService extends TreeService<TestTreeDao, TestTree>
 		implements TestTreeServiceApi {
 	
@@ -55,7 +52,7 @@ public class TestTreeService extends TreeService<TestTreeDao, TestTree>
 	 */
 	@Override
 	@GlobalTransactional
-	@Transactional(readOnly=false)
+	@Transactional
 	public void save(TestTree testTree) {
 		super.save(testTree);
 		// 保存上传图片
@@ -69,7 +66,7 @@ public class TestTreeService extends TreeService<TestTreeDao, TestTree>
 	 * @param testTree
 	 */
 	@Override
-	@Transactional(readOnly=false)
+	@Transactional
 	public void updateStatus(TestTree testTree) {
 		super.updateStatus(testTree);
 	}
@@ -79,7 +76,7 @@ public class TestTreeService extends TreeService<TestTreeDao, TestTree>
 	 * @param testTree
 	 */
 	@Override
-	@Transactional(readOnly=false)
+	@Transactional
 	public void delete(TestTree testTree) {
 		super.delete(testTree);
 	}
