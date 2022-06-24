@@ -100,7 +100,6 @@
 
     <build>
 		<finalName>${finalName}</finalName>
-		<outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -110,11 +109,14 @@
             </resource>
         </resources>
         <plugins>
-            
+
 			<!-- Spring Boot -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<includeSystemScope>true</includeSystemScope>
+				</configuration>
 			</plugin>
 
 			<!-- war插件，war包名称不带版本号 -->
