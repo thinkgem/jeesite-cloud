@@ -249,6 +249,10 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
+
+  # Feign 序列化时区
+  jackson:
+    time-zone: GMT+8
       
   # Consul 服务发现
   cloud:
