@@ -13,7 +13,7 @@
 	<artifactId>jeesite-cloud-module-test3-client</artifactId>
 	<packaging>jar</packaging>
 	
-	<name>JeeSite Cloud Module Test3 Client</name>
+	<name>JeeSite Cloud Module test3 Client</name>
 	<url>http://jeesite.com</url>
 	<inceptionYear>2013-Now</inceptionYear>
 	

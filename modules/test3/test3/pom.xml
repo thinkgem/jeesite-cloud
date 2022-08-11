@@ -13,7 +13,7 @@
 	<artifactId>jeesite-cloud-module-test3</artifactId>
 	<packaging>war</packaging>
 	
-	<name>JeeSite Cloud Module Test3</name>
+	<name>JeeSite Cloud Module test3</name>
 	<url>http://jeesite.com</url>
 	<inceptionYear>2013-Now</inceptionYear>
 	
