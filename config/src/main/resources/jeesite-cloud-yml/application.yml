@@ -8,7 +8,7 @@ productName: JeeSite Cloud
 companyName: ThinkGem
 
 # 产品版本、版权年份
-productVersion: V4.5
+productVersion: V4.6
 copyrightYear: 2022
 
 #是否演示模式
@@ -23,7 +23,7 @@ server:
   servlet:
     context-path: /js
     register-default-servlet: false
-    encoding.enabled: true
+#    encoding.enabled: true
   tomcat:
     uri-encoding: UTF-8
     

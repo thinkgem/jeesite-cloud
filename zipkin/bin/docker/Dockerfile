@@ -17,4 +17,4 @@ ENTRYPOINT jar -xvf app.war && rm app.war && cd WEB-INF && sh startup.sh
 
 EXPOSE 9411
 
-#docker run -p 9411:9411 thinkgem/jeesite-cloud-zipkin:4.4
+#docker run -p 9411:9411 thinkgem/jeesite-cloud-zipkin:4.6
